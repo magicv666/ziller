@@ -1,0 +1,21 @@
+package all4test;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class caculatetime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  long curren = System.currentTimeMillis();
+	      long before_30min = curren - 30 * 60 * 1000;
+	      Date da = new Date(curren);
+	      SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	      
+	      Date da1 = new Date(before_30min);
+	      SimpleDateFormat dateFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	      System.out.println(dateFormat.format(da));
+	      System.out.println(dateFormat1.format(da1));
+	}
+
+}
